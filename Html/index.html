@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบสอบถามความสัมพันธ์</title>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+<style>
+body{
+  font-family: Arial;
+  background:#ffe6f0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+button{
+  margin-top:15px;
+  padding:10px 18px;
+  border:none;
+  border-radius:10px;
+  background:#ff4da6;
+  color:white;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>?? แบบสอบถามความสัมพันธ์</h2>
+<p>สแกน QR หรือกดเริ่มได้เลย</p>
+
+<div id="qrcode"></div>
+
+<button onclick="location.href='survey.html'">
+เริ่มทำแบบสอบถาม
+</button>
+</div>
+
+<script>
+new QRCode(document.getElementById("qrcode"), {
+text: "survey.html",
+width:200,
+height:200
+});
+</script>
+
+</body>
+</html>
